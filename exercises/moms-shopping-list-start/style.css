@@ -1,46 +1,104 @@
-.title {
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.main {
-    border: 1px solid black;
-    width: 50%;
-    margin: auto;
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: "Open sans-serif", sans-serif;
+    background-color: rgb(194, 193, 189);
+   
+}
+
+.container {
+    height: 500px;
+    max-height: 900px;
+    max-width: 600px;
+    margin: 10rem auto;
+    overflow: auto;
     display: block;
-
-}
-form{
-    display: flex;
-}
-#add-item {
-    border: 1px solid black;
-}
-
-.input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: flex;
-    border: 1px solid rgb(221, 7, 7);
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.label {
-    margin: 10px;
-}
-
-#list {
-    flex-direction: column;
-    display: flex;
-}
-
-#list > li{
-    list-style-type: none;
-    margin: 10px auto;
-}
-
-#list div {
-    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    background-color: antiquewhite;
 }
+
+#title{
+    font-size: 30px;
+    margin: 1rem;
+}
+
+.add-item form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.add-item form input{
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0 1rem 1rem;
+    background-color: rgb(236, 238, 227);
+    color: black;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    
+}
+::placeholder{
+    color: rgb(178, 176, 176);
+    
+    
+}
+
+form button {
+    width: 10%;
+    font-size: 2rem;
+    margin: 1rem;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+form button:hover{
+    color: green;
+    background-color: black;
+}
+
+ol li{
+    margin: 1.5rem 5rem;
+    font-size: 1.6rem;
+    border-bottom: .1rem solid green;
+    width: 500px;
+    text-align: right;
+    list-style: none;
+    
+    font-family: cursive;
+    font-weight: 500;
+}
+
+ol li:nth-child(odd){
+    background-color: #eee;
+    color: black;
+}
+/* hides 1st li line */
+li:first-child{
+    display: none;
+}
+
+.clear {
+    margin: 1rem;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1rem;
+
+}
+
+
