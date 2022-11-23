@@ -1,3 +1,10 @@
+Mom's Shopping List Preview
+
+<img width="981" alt="Screenshot 2022-11-23 at 8 43 12 AM" src="https://user-images.githubusercontent.com/110871707/203561907-a06db7e8-d78d-4da0-885a-81fcbeab59b3.png">
+
+
+
+<!--VSchool Ream Me  -->
 clone this repo
 
 In terminal, CD into the project folder.
