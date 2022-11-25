@@ -64,11 +64,22 @@ function createItem(e){
   addEdit(li);
   addDelete(li);
 
+  /* another option is to do this way 
+    const delete = document.createElement("button")
+    delete.addEventListener("click", function(e) {
+      li.remove()
+    })
+  */
+
   document.getElementsByName("item-list")[0].append(li);
 }
-
+// Clear ALL
 function clearALL(){
-  
+  const itemList = document.getElementById("item-list");
+  // console.log(itemList.children);
+    while(itemList.children.length > 0){
+      itemList.children[0].remove();
+    }
 }
 
 // clear all btn
