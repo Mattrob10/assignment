@@ -30,7 +30,7 @@ function div(num1, num2) {
   return Number(num1) / Number(num2);
 }
 
-function operaterChoice(){
+function operatorChoice(){
   let operator = readlineSync.question('Select operator: ');
   switch (operator){
     case "+":
@@ -58,4 +58,4 @@ function operaterChoice(){
 
   }
 }
-operaterChoice();
+operatorChoice();
