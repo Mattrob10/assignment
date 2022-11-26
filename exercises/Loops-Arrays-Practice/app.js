@@ -41,4 +41,3 @@ for (let i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
 }
 }
 
-// HOW DO I GET ARRAY TO STOP AT SECOND STATEMENT
