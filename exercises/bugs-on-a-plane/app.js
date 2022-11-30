@@ -1,12 +1,12 @@
-var form = document.getElementByID("arline-form");
-var submit = document.getElementByID(submit);
-var query = document.querySelector;
+const form = document.getElementById("airline-form");
+const submit = document.getElementById("submit");
 
-function formAlert(){
-    var firstName = document.getElementsByName("first-name")[0].value;
-    var lastName = document.getElementsByName("last-name")[0].value;
-    var age = document.getElementsByName("age")[0].value;
-    var genderSelect = document.getElementsByName("gender");
+function formAlert() {
+    var firstName = form.elements["first-name"].value;
+    var lastName = form.elements["last-name"].value;
+    var age = form.elements["age"].value;
+    var gender = form.elements["gender"].value;
+    var location = form.elements["travel-location"].value;
     var diet = [];
     if (form.elements['vegan'].checked) {
         diet.push(document.getElementById("vegan").value);
@@ -18,12 +18,7 @@ function formAlert(){
         diet.push(document.getElementById('paleo').value);
     }
 
-
     alert("First Name: " + firstName + "\nLast Name: " + lastName + "\nAge: " + age + "\nGender: " + gender + "\nTravel Location: " + location + "\nDiet: " + diet + "\nAwesome, now if you die, it won't be an accident..");
-};
+}
 
-
-submit.addEventListener("click", function (event){
-    event.preventDefault();
-    formAlert();
-});
+submit.addEventListener("click", formAlert);
