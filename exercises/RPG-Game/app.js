@@ -1,156 +1,222 @@
-const readlineSynce = require("readline-sync");
-
-// 2. Console must ask for the player's name and store it
-const name = readlineSynce.question("What is your name? ");
-
-// 1. Console must greet player with a fun message
-const answer1 = readlineSynce.question(`Welcome ${name} to Copper Top Mountains'  👾 GAME 👾  Press Enter to begin your hike!`);
-
-//HIKER COMMANDS
-const option1 = ["Walk", "Exit"];
+var readlineSync = require("readline-sync");
 
 
 //HIKER CONSTRUCTOR
-function player(classType, health, attacking){
-  this.classType = classType;
-  this.health = health;
-  this.attacking = attacking; 
- 
+class Player{
+  constructor(player, HP, AP){
+    this.player = player;
+    this.HP = HP
+    this.AP = AP;
+    this.inventory = [];
+    this.enemyKilled = 0;
+  }
+  isAlive(){
+    return this.HP > 0;
+  }
+  reduceHP(damage){
+    this.HP -= damage;
+    if(this.HP < 0){
+      this.HP = 0;
+    }
+  }
 }
+
 
 // Set User 
-let user = new player("Hiker", 100, 50)
+console.log("WELCOME TO COPPERTOP ⛰️ MOUNTAIN 👾 GAME 👾");
 
-// user inventory
-let inventory = [];
-function Inventory(item, rewardPoints){
-  this.item = item;
-  this.rewardPoints = rewardPoints;
-}
-let water = new Inventory("Water", 20)
-let food = new Inventory("Food", 30)
-let healthKit = new Inventory("health kit", 50)
-inventory.push(water, food, healthKit);
+var playerName = readlineSync.question("What is your name? ");
+console.log("Welcome " + playerName + " to Coppertop Mountain ⛰️  where you walk an unexplored trail 🗺️  on the backside of the ⛰  mountain!");
 
-//ENEMIES CONTSTRUCTOR
-let enemies = [];
-function Enemies(name, health){
-    this.name = name;
-    this.health = health;
-}
-let bear = new Enemies("Bear 🐻", 75)
-let wolves = new Enemies(" 🐺 PACK OF WOLVES 🐾 ", 50)
-let yeti = new Enemies("👣 YETI 🧌", 100)
-enemies.push(bear, wolves, yeti);
 
-let hp = 100
-
-function walk() {
-  const options = ["WALK", "User Info"];
-  const userOption = readlineSynce.keyInSelect(options, "Choose one of the following options:");
- if (userOption === 0){
-    console.log("Let us continue the trail...");
-    // The enemy is random (can be chosen out of a minimum of 3 different enemy names)
-    const enemy = enemies[Math.floor(Math.random() * enemies.length)];
-    const playerInventory = inventory[Math.random() + inventory.length];
-    // console.log(enemy);
-   
-    
- if (userOption <= 0.4){
-      console.log("Oh No!  There's a " + enemy.name + " and they have spotted you!");
-      decision(enemy);
-    }
- } else if (userOption === 1){
-  // const item = inventory[Math.floor(Math.random() * inventory.length)]
-  
-  console.log(name + "\'s " + 'Health: ' + user.health);
- } else if (userOption === -1){
-    hp = 0;
-    console.log(name + " EXITED the Game!");
-   
-  
- }
-}
-// The user can decide to attack or run
- function decision(boss){
-  const option2 = ["🏃RUN!", "🤺FIGHT!"];
-  const enemy = enemies[Math.floor(Math.random() * enemies.length)];
-  const userAttack = readlineSynce.keyInSelect(option2, "What will you do? ");
-if (userAttack === 0){
-  user.health -= 20;
-  console.log("You ran away, but were attacked in the process!");
-  console.log("Your new health is: " + user.health); 
-} else if (userAttack === 1){
-  console.log("FIGHTING the " + enemy.name);
-  return;
-}1
-  //  if (chance >= .5){
-  //    user.health -=  20;
-  //    console.log("YOU'VE ran away, but were hurt in the process!");
-  //    console.log("Your new health is: " + user.health);
-  //    return;
-  // } else if (chance <= .6){
-  //    console.log("fighting")
-  //   // }
-  
-function fight(boss){
-  while (user.health > 0){
-    // var userHP = user.attacking;
-    // var enemyHP = Enemies.attacking;
-    // console.log(userHP);
-    // console.log(enemyHP);
-    // break;
+const newPlayer = new Player(playerName, 200, 50);
+// console.log(newPlayer.isAlive());
+////INVENTORY
+class Inventory{
+  constructor(item, HP){
+    this.item = item;
+    this.HP = HP;
   }
+}
+const healthKit = new Inventory("health kit", 30)
 
+
+//pushes HK into invenetory
+function findItem(healthKit){
+  newPlayer.inventory.push(healthKit);
+}
+function showInventory(){
+  console.log(newPlayer);
 }
 
 
+//inventory
+function useItem(){
+    if(newPlayer.inventory.length == 0){
+      console.log("NOTHING HERE");
+    } else {
+      newPlayer.HP += 30;
+      console.log("added 30HP");
 
-
+      newPlayer.inventory.shift()
     }
-  
-//   const option3 = ["YES", "No Thank You!"];
-//  function replayGame(){
-//      const replayGame = readlineSynce.keyInSelect(option3);
-//      if(replayGame === true){
-//        hp = 100;
-//      } else {
-//        console.log(`thank you!`);
-//    }
-
-
-
-
-
-
-// ### **Project Requirements:**
-// - Every time the player walks, a random algorithm will be run that determines if a wild      enemy has appeared (A 1/3 or 1/4 chance of being attacked)
-// - Use a while loop to control this flow.
-// 1. If a wild enemy appears:
-// - 
-// - 
-// - If attacking, a random amount of damage will be dealt between a min and max
-// - If running, there will be a 50% chance of escaping
-// - After the player attacks or runs the enemy attacks back for a random damage amount
-// - The player and enemy will attack each other in a loop until one of them passes out or dies.
-// - If the player kills the enemy you can give the Player some HP and a special item that is stored in the inventory. After this, the player will continue walking.
-// - If the enemy kills the player the console prints a cool death message and the game ends
-// 1. Inventory
-// - When the player kills enemies, they are awarded with items
-// - If the user enters 'Print' or 'p' in the console, the console will print the players name, HP, and each item in their inventory
-
-// function randomDmg(max, min) {
-//   const attackDamage = Math.floor(Math.random() * (max - min) + min);
-//   return attackDamage;
-// }
-//userRestore();
-
-// function randomDmg(max, min) {
-//   const attackDamage = Math.floor(Math.random() * (max - min) + min);
-//   return attackDamage;
-// }
-
-while (hp > 0){
- walk();
 }
+class Enemies{
+  constructor(enemy, HP, AP){
+    this.enemy = enemy;
+    this.HP = HP;
+    this.AP = AP;
+  }
+  isAlive(){
+    return this.HP > 0;
+  }
+  reduceHP(damage){
+   this.HP -= damage;
+    if(this.HP < 0){
+       this.HP = 0;
+    }
+  }
+}
+let bear = new Enemies("Bear 🐻", 75, 25)
+let wolves = new Enemies(" 🐺 PACK OF WOLVES 🐾 ", 50, 20)
+let yeti = new Enemies("👣 YETI 🧌", 80, 30)
+let enemies = [bear, wolves, yeti];
+
+
+
+function walk(){
+  const odds = Math.random();
+  if(odds > 0.5){
+    console.log("💭 This trail probably wasn't the best, but I'm going to keep exploring!  Let's continue hiking 🥾..."); 
+  } else {
+    enemyEncounter();
+  } 
+}
+
+function enemyEncounter() {
+  if (enemies.length == 0) {
+    console.log(
+      "You did it! You eliminated all the wild animals....killing a total of " +
+        +
+        newPlayer.enemyKilled
+        +
+        " Enemies killed."
+    );
+    let end = readlineSync.keyIn("[q] for quit", { limit: "q" });
+    if (end === "q") {
+      console.log("QUIT GAME")
+      process.exit();
+    }
+  } else {
+    let newEncounter = enemies[Math.floor(Math.random() * enemies.length)];
+    console.log("Heads ⚠️ up!  There's a " + newEncounter.enemy + "!" );
+    console.log(newEncounter);
+    fight(newEncounter);
+  }
+} 
+
+function fight(newEncounter) {
+  while (newPlayer.isAlive() && newEncounter.isAlive()) {
+    const fightOptions = readlineSync.keyIn(
+      "[r]Run 🏃‍♂️ Away\n[f]🤺Attack\n[u]🩹HealthKit\n[q]🔚Quit the game",
+      { limit: "rfuq" }
+    );
+
+    const chanceOfEscape = Math.random();
+    if (fightOptions === "r") {
+      if (chanceOfEscape > 0.5) {
+        console.log(
+          "The animal trapped you! Use an item ⚕️ if available!!!!."
+        );
+        enemyAttack(newEncounter);
+        // playerAttack(newEncounter);
+        return;
+      } else {
+        enemyAttack(newEncounter);
+      }
+    } else if (fightOptions === "f") {
+      playerAttack(newEncounter);
+      enemyAttack(newEncounter);
+    } else if (fightOptions === "u") {
+      useItem();
+    } else if (fightOptions === "q") {
+      console.log(
+        "Nobody likes quiter, I amlost quit trying to make this RPG!   😂"
+      );
+      //node to quit
+      process.exit;
+    }
+  }
+  if (newPlayer.HP == 0) {
+    console.log(
+      playerName +
+        " you died to " +
+        newEncounter.enemy +
+        ".... maybe next time!"
+    );
+  } else if (newEncounter.HP == 0) {
+    enemyKilled(newEncounter);
+    console.log(newEncounter.enemy + " has been eliminated. You gain 30HP");
+    findItem(healthKit);
+    console.log(
+      "Great Fight 🤺 " + newEncounter.enemy + " dies and drops an item for you, its another HealthKit: 30HP" + healthKit.item);
+  }
+}
+//ATTACKING
+function enemyAttack(newEncounter) {
+  newPlayer.reduceHP(Math.floor(Math.random() * newEncounter.AP));
+  console.log(
+    "You're Taking Damage " +
+      newEncounter.enemy +
+      " HP remaining: " +
+      newPlayer.HP
+  );
+}
+function playerAttack(newEncounter) {
+  newEncounter.reduceHP(Math.floor(Math.random() * newPlayer.AP));
+  console.log(
+    "🤺 Fighting!" +
+      newEncounter.enemy +
+      "Your HP remaining: " +
+      newEncounter.HP
+  );
+}
+///REWARD DUE ENEMY DEATH
+function enemyKilled(newEncounter){
+  let encounterSP = enemies.indexOf(newEncounter);
+  enemies.splice(encounterSP,1);
+  newPlayer.HP += 25;
+  newPlayer.enemyKilled++;
+}
+
+while (newPlayer.isAlive()) {
+  const commands = readlineSync.keyIn(
+    "[w]Walk\n[i]Inventory\n[u]Use Item\n[q]Quit Game\n",
+    { limit: "wiuq" }
+  );
+  if (commands == "w") {
+    walk();
+  
+  } else if (commands == "i") {
+    showInventory();
+  } else if (commands == "u") {
+    useItem(healthKit);
+  } else if (commands == "q") {
+    if (enemies.length > 0) {
+      console.log("You quit without defeating all the enemies, maybe next time we'll actually play the GAME 👾");
+      process.exit;
+      break;
+    }
+  } else {
+    console.log("You Made It Back ALIVE!!");
+    process.exit;
+    break;
+  }
+}
+
+
+
+
+
+
 
