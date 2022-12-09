@@ -177,7 +177,7 @@ function playerAttack(newEncounter) {
   console.log(
     "🤺 Fighting!" +
       newEncounter.enemy +
-      "Your HP remaining: " +
+      "Enemy HP remaining: " +
       newEncounter.HP
   );
 }
