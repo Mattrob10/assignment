@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mario Pest Control</title>
+</head>
+<body>
+  <h1>Mario Pest Control</h1>
+  <br>
+  <div class="container">
+    <form name="myForm">
+      <ul>
+        <li id="goombas">
+          <h3>Goombas</h3>
+          <img src="images/goomba1.png" height="200px"width="200px"> 
+          <p>Price: 5 Coins</p>
+          <label for="total ">Total caught:</label>
+          <br>
+          <input type="number" id="goombas-count">
+          <br>
+          <label for="price">Price:</label>
+          <br>
+          <input type="text" readonly id="goombas-price">
+          <hr>
+      </li>
+        <li id="bob-ombs">
+          <h3>Bob-ombs</h3>
+          <img src="images/Bob-ombs.png" height="200px"width="200px"> 
+          <p>Price: 7 Coins</p>
+          <label for="total ">Total caught:</label>
+          <br>
+          <input type="number" id="bobombs-count">
+          <br>
+          <label for="price">Price:</label>
+          <br>
+          <input type="text" readonly id="bobombs-price">
+          <hr>
+      </li>
+        <li id="cheeps">
+          <h3>Cheep-cheeps</h3>
+          <img src="images/Cheep-Cheep.webp" height="200px"width="200px"> 
+          <p>Price: 11 Coins</p>
+          <label for="total ">Total caught:</label>
+          <br>
+          <input type="number" id="cheeps-count">
+          <br>
+          <label for="price">Price:</label>
+          <br>
+          <input type="text" readonly id="cheeps-price">
+          <hr>
+      </li>
+      <li id="total">
+          <h3>Total</h3>
+          <img src="images/SMB.png" height="200px" width="200px">
+          <br>
+          <br>
+          <label for="total">Total Price:</label>
+          <br>
+          <input type="text" readonly id="total-price">
+          <br>
+          <button id="calculate">Calculate</button>
+      </li>
+      </ul>
+
+    </form>
+  </div>
+      <script src="app.js"></script>
+</body>
+</html>
