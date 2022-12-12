@@ -1,0 +1,28 @@
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.container{
+  background-color: rgb(98, 175, 214);
+  width: 800px;
+  height: 100%;
+  margin: 50px;
+  height: 100%;
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+form{
+  margin: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Travel Form</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Travel Registration</h2>
+    <form name="myForm">
+      <div>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Ex: John"/>
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Ex: Smith"/>
+      </div> 
+      <div class="gender">
+        Male:   <input type="radio" name="gender" value="Male"/>
+        Female: <input type="radio" name="gender" value="Female"/>
+        Other: <input type="radio" name="gender" value="Other"/>
+      </div>
+
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" min="1" max="200"/>
+      <br>
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="Ireland">Ireland</option>
+        <option value="Italy">Italy</option>
+        <option value="Mexico">Mexico</option>
+      </select>
+      <br>
+      <div class="diet">
+        Please specify your if you have any dietary restrictions:
+        <br>
+        Kosher: <input type="checkbox" value="kosher" name="diet"/>
+      
+        Peanut Allergy: <input type="checkbox" value="Peanut" name="diet"/>
+      
+        Vegetarian: <input type="checkbox" value="Vegetarian" name="diet"/>
+    
+        Non-dairy: <input type="checkbox" value="Non-dairy" name="diet"/>
+       
+        None: <input type="checkbox" value="None" name="diet"/>
+       
+      </div>
+      <button id="submit">Submit</button>
+    </form>
+  </div>
+  
+    <script src="app.js"></script>
+</body>
+</html>
