@@ -29,7 +29,7 @@ var playerName = readlineSync.question("What is your name? ");
 console.log("Welcome " + playerName + " to Coppertop Mountain ⛰️  where you walk an unexplored trail 🗺️  on the backside of the ⛰  mountain!");
 
 
-const newPlayer = new Player(playerName, 200, 50);
+const newPlayer = new Player(playerName, 120, 50);
 // console.log(newPlayer.isAlive());
 ////INVENTORY
 class Inventory{

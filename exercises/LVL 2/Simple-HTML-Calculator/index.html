@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Simple HTML Calculator</title>
+</head>
+<body>
+<header>Simple HTML Calculator</header>  
+<form name = "calculator">
+  <!-- ADD SECTION -->
+    <div class="add">
+      <input placeholder="Type A Number" type="number" name="num1" id="num1">
+      <input placeholder="Type A Number" type="number" name="num2" id="num2">
+      <input type="button" value="➕" onclick="addNum()">
+      <input placeholder="RESULT" type="text" id="answer">
+    </div>
+
+
+    <!-- SUBTRACT -->
+    <div class="subtract">
+      <input placeholder="Type A Number" type="number" id="sub1">
+      <input placeholder="Type A Number" type="number" id="sub2">
+      <input type="button" value="➖" onclick="subtract()"> 
+      <input placeholder="RESULT" type="number" id="subAnswer">
+    </div>
+    <!-- MULTIPLY -->
+    <div class="multiply">
+      <input placeholder="Type A Number" type="number" id="mul1">
+      <input placeholder="Type A Number" type="number" id="mul2">
+      <input type="button" value="✖️" onclick="multiply()">
+      <input placeholder="RESULT" type="number" id="mulAnswer">
+    </div>
+  </form>
+<footer>Created by Matthew Robinson</footer>
+      <script src="app.js"></script>
+</body>
+</html>
+
