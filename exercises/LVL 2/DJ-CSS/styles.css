@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: rgb(255, 255, 255);
+}
+body:hover{
+  background-color: rgb(165, 165, 237);
+  transition: all 0.5s ease-in;
+}
+h1{
+  color: red;
+  text-align: center;
+  margin: 20px;
+  font-size: 35px;
+}
+h1:hover{
+  color: blue;
+  background-color: red;
+  
+}
+
+p{
+  color: rgb(0, 68, 255);
+  font-size: 28px;
+  text-align: center;
+  margin: 10px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  margin: 50px;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.box1{
+  border: 15px solid navajowhite;
+  background-color: crimson;
+  margin: 10px;
+  transition: 1s all ease-in;
+}
+.box1:hover {
+  border: 15px solid red;
+  background-color: navajowhite;
+
+}
+
+.box2{
+  border: 5px solid rgb(37, 35, 35);
+  border-radius: 5px 0 5px 0;
+  background-color: purple;
+  margin: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.box2:hover {
+  border: 12px dashed red;
+  border-radius:0 5px 0 5px;
+  background-color: rgb(95, 71, 95);
+  margin: 20px;
+  height: 250px;
+  z-index: 999;
+  
+}
+
+.box3{
+  border-radius: 15px;
+  box-shadow:   40px 0 20px 0 salmon;
+  background-color: green;
+  margin: 10px;
+  transition-property: background-color;
+  transition: .7s ease-in-out;
+}
+
+.box3:hover {
+  border-radius: 15px;
+  box-shadow: none;
+  background-color: salmon;
+  margin: 10px;
+}
+
+.box4{
+  border: 2px solid black;
+  background-color: rgb(250, 135, 54);
+  margin: 10px;
+  transition: 2s background-color, transform 2s;
+}
+.box4:hover{
+  background-color: gray;
+  box-shadow:  0 0 15px 15px white;
+  
+}
+
+.box5{
+  border: 2px solid white;
+  background-color: rgb(59, 59, 27);
+  margin: 10px;
+  transition: border-radius 1s ease-in-out;
+}
+.box5:hover{
+  background-color: wheat;
+  border-radius: 20px;
+  
+  
+}
+
+.box6{
+  margin: 10px;
+  border: 3px solid red;
+  border-width: 1px;
+  display: block;
+  background-color: #0000ff;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.box6:hover {
+  background-color: #ffcccc;
+  width: 250px;
+  height: 300px;
+  rotate: 180deg;
+}
+
+footer{
+  background-color: rgb(215, 215, 236);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: rgb(200, 25, 25);
+}
+
+    /* transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s; */
+    
