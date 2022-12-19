@@ -103,7 +103,8 @@ p{
 .box5:hover{
   background-color: wheat;
   border-radius: 20px;
-  
+  width: 400px;
+  z-index: 999;
   
 }
 

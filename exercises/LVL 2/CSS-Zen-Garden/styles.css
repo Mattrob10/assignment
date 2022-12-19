@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Libre+Baskerville:ital@0;1&display=swap');
+
+/* font-family: 'Julius Sans One', sans-serif;
+font-family: 'Libre Baskerville', serif; */
+
+@font-face {
+  font-family: 'verdemoderna';
+  src: url(font/verdemoderna.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+
+body,
+html {
+  color: #325050;
+  background: #fff;
+  font-family: 'Libre Baskerville', serif;;
+  font-size: 100%;
+}
+
+.container{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header nav"
+  "section1 section1 sidebar1"
+  "section2 section2 sidebar2"
+  "section3 section3 empty"
+  "credits credits credits"
+  "footer footer footer";
+}
+
+.header{
+  grid-area: header;
+  position: relative;
+  background: url(images/contours@2x.png), url(images/noise.png), url(images/gridlines-opaque.png), url(images/huntington.jpg);
+  min-height: 19.375rem;
+  background-repeat: repeat, repeat, repeat;
+  background-size: auto, auto, auto;
+  color: fff;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  height: 39rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 3.2rem;
+  
+}
+.header img{
+
+margin-top: 250px;
+margin-left: 270px;
+
+}
+.header h1 {
+  position: relative;
+  bottom: 270px;
+  left: 590px;
+  font-weight: normal;
+ 
+
+  font-family: 'Julius Sans One', sans-serif;  
+  color: #fff;
+  padding: 2rem;
+}
+.header h2 {
+  text-transform: cursive;
+  color: rgb(216, 214, 214);
+  font-style: oblique 23deg;
+  font-size: 3.1rem;
+  position: relative;
+  bottom: 280px;
+  left: 630px;
+}
+.nav{
+  position: relative;
+  background: url(images/contours@2x.png), url(images/noise.png), url(images/gridlines-opaque.png), url(images/huntington.jpg);
+  min-height: 19.375rem;
+  grid-area: nav;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+}
+/* nav btns */
+#viewAll{
+  height: 8rem;
+  width: 30rem;
+  background-color: #bec4c626;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: normal;
+  box-shadow: 2px black;
+  cursor: pointer;
+}
+
+#arrowR{
+  height: 8rem;
+  width: 8rem;
+  background-color: #bec4c626;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+
+
+/* START OF SECTION 1 */
+.section1{
+  grid-area: section1;
+  height: auto;
+  font-size: 2rem;
+  padding: 6% 6% 6% 15%;
+  line-height: 4rem;
+}
+
+.section1 h1{
+  font-family: 'Julius Sans One', sans-serif; 
+  letter-spacing: .1rem;
+  font-size: 3.5rem;
+  font-weight: 300;
+  
+}
+
+.section1 p, .section2 p, .section3 p{
+  padding: 1rem 0 1rem 0;
+}
+.section hr {
+  line-height: 0%;
+}
+/* text items decorations */
+.terms{
+ text-decoration: underline dotted;
+}
+a{
+  outline: none;
+  text-decoration: none;
+  color: #134347;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: #3898b9;
+  cursor: pointer;
+}
+
+.hLight{
+  color: #3898b9;
+}
+.hLight:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+#dl{
+  background-color: #fff;
+  color: #809b7e;
+  font-family:'Julius Sans One', sans-serif;
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  transition: all 0.25s ease-out;
+}
+
+#dl:hover{
+  background-color: #05798d;
+  padding: 5px 10px; 
+  border-radius: 5px;
+  color: #fff;
+  
+  
+}
+
+/* First Sidebar */
+.sidebar{
+  grid-area: sidebar1;
+  background-color: rgba(229,237,232);
+  padding: 15% 30% 5% 15%;
+  text-align: left; 
+  color: #325050;
+}
+
+.sidebar1{
+  font-size: 2.5rem;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: left;
+  padding-top: 2.5rem;
+}
+.sidebar1a{
+  font-size: 2rem;
+  font-family: 'Libre Baskerville', serif;
+  text-align: left;
+  padding-top: .7rem;
+  padding-bottom: 2.5rem;
+  cursor: pointer;
+}
+#by{
+  font-style: italic;
+  color: grey;
+}
+.sidebar1a:hover{
+  color: #05798d;
+}
+
+.section2{
+  grid-area: section2;
+  background-attachment: scroll, scroll, fixed;
+  background-image: url(./images/contours-opaque.png), url(./images/gridlines-opaque.png), url(./images/bamboo.png);
+  background-color: rgba(138,188,159,0.5);
+  background-repeat: repeat, repeat, no-repeat;
+  background-size: auto, auto, cover;
+  color: #fff;
+  height: auto;
+  font-size: 2rem;
+  padding: 6% 6% 6% 15%;
+  line-height: 4rem;
+  color: #2e484c;
+}
+.section2 h1{
+  font-family: 'Julius Sans One', sans-serif; 
+  padding-bottom: 1rem;
+  letter-spacing: .1rem;
+  font-size: 3.5rem;
+  color: #2e484c;
+}
+
+.sidebar2{
+  grid-area: sidebar2;
+  background-color: rgba(125, 172, 145, 0.667);
+  background-image: url(./images/bamboo.png);
+  padding: 25% 28% 0% 15%;
+  /* overflow: hidden; */
+
+}
+
+.sidebar2a li{
+  border-top: solid 1px #647a6f;
+  font-style: normal;
+  font-size: 2.5rem;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: left;
+  line-height: 2;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  cursor: pointer;
+}
+.sidebar2a li:last-child{
+  border-bottom: solid 1px #5e8673;
+}
+.sidebar2a li:hover{
+  color: #05798d;
+}
+
+
+.section3{
+  grid-area: section3;
+  height: auto;
+  font-size: 2rem;
+  padding: 6% 6% 6% 15%; 
+  line-height: 4rem;
+}
+
+
+
+.section3 h1{
+  font-family: 'Julius Sans One', sans-serif; 
+  letter-spacing: .1rem;
+  font-size: 3.5rem;
+}
+
+.empty{
+  grid-area: empty;
+  background-color: rgba(229, 237, 232);
+}
+
+.credits{
+  grid-area: credits;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.4);
+  background: url(images/contours@2x.png), url(images/koi.jpg);
+  background-size:cover;
+  padding: 7% 10.5%;
+  
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2;
+
+}
+.credits a {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.25s ease-out;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  font-family:'verdemoderna';
+  grid-area: footer;
+  background: #134347;
+  width: 100%;
+  height: 22rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2.1em 10%;
+  position: relative;
+  bottom: 0;
+}
+
+a.icons {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 9rem;
+  margin: 0 6rem;
+  cursor: pointer;
+  padding: .5rem;
+
+
+}
+
+a.icons:hover{
+  background: rgba(255, 255, 255, 0.25);
+  
+  border-radius: 50%;
+  color: #134347;
+
+ 
+}
+
