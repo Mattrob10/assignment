@@ -1,0 +1,110 @@
+{
+  "Deli-Menu":{
+    "appetizers": [
+      {
+        "name": "Grilled Chicken Salad",
+        "ingredients": [
+          "grilled chicken breast",
+          "lettuce",
+          "mozzarella cheese",
+          "tomatoe",
+          "black olives",
+          "croutons",
+          "dressing of choice"
+        ],
+        "description": "Perfect salad to fill your nutrional needs!"
+      },
+      {
+        "name": "Cheesy Chicken Chilli Soup",
+        "ingredients": [
+          "chicken", 
+          "mexican shredded cheese",
+          "jalapeno",
+          "kidney beans",
+          "red beans",
+          "tomatoe",
+          "onion",
+          "peppers"
+        ],
+        "description": "Warm your soul up with this tasty soup!"
+      },
+      {
+        "name": "Small Side Sald",
+        "ingredients": [
+          "lettuce",
+          "olives",
+          "tomatoe",
+          "mozzarella cheese",
+          "dressing of choice"
+        ],
+        "description": "Grab and Go Salad!"
+      }
+    ],
+    "Cold Sandwiches":[
+      {
+        "name": "Turkey Club Sandwich",
+        "ingredients": [
+          "choice of bread",
+          "turkey", 
+          "lettuce",
+          "tomatoe",
+          "swiss chesse",
+          "dressing of choice"
+        ],
+        "description": "GOOBLE up this Turkey Club"
+      },
+      {
+        "name": "Guido Sandwich",
+        "ingredients":[
+          "Italian bread",
+          "salami",
+          "capacolla",
+          "ham",
+          "mozzarella cheese",
+          "lettuce",
+          "tomatoe",
+          "dressing of choice"
+        ],
+        "description": "Deli's Best Choice Sandwich"
+      },
+      {
+        "name": "Veggie Sandwich",
+        "ingredients":[
+          "Italian bread",
+          "swiss cheese",
+          "lettuce",
+          "tomatoe",
+          "olives",
+          "cucumbers",
+          "dressing of choice"
+        ],
+        "description": "Plant-based Sandwich"
+      }
+    ], 
+    "Hot Sanwiches": [
+      {
+        "name": "Meatball Sub",
+        "ingredients":[
+          "Italian bread",
+          "meatballs", 
+          "marinara sauce",
+          "mozzarella cheese"
+        ],
+        "description": "Get it Toased 🔥"
+      },
+      {
+        "name": "Sausage Sub",
+        "ingredients":[
+          "Italian bread",
+          "Italian sausage",
+          "marinara sauce",
+          "peppers",
+          "jalapenos",
+          "mozzarella cheese"
+        ],
+        "description": "Super 🔥 Sausage Sub"
+      }
+      
+    ]
+  }
+}
