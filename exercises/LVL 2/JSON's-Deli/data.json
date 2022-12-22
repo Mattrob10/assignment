@@ -104,7 +104,42 @@
         ],
         "description": "Super 🔥 Sausage Sub"
       }
-      
+    ],
+    "Desserts": [
+      {
+        "name": "Cannoli",
+        "ingredients":[
+          "shell",
+          "it's a family secret!"
+        ],
+        "description": "Rich and Creamy!"
+      },
+      {
+        "name": "Chocolate Chip Cookie",
+        "ingredients":[
+          "chocolate chips",
+          "contains EGGS!"
+        ],
+        "description": "🍪"
+      }
+    ],
+    "Beverages":[
+    {
+      "name": "Bottled Water",
+      "ingredients":[
+        "H2O"
+      ],
+      "description": "Get your thrist on 💦"
+    },
+    {
+      "name": "Tea",
+      "ingredients": [
+        "chia",
+        "black",
+        "green",
+        "cinnamon"
+      ]
+    }
     ]
   }
 }
