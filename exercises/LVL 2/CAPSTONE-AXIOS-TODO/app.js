@@ -87,8 +87,8 @@ function listData(data) {
         saveButton.hidden = false
         editButton.hidden = true
         h2.style.backgroundColor = "#07a0f9"
-        priceText.style.backgroundColor = "crimson"
-        h4.style.backgroundColor = "crimson"
+        priceText.style.backgroundColor = "#07a0f9"
+        h4.style.backgroundColor = "#07a0f9"
 
 
 
