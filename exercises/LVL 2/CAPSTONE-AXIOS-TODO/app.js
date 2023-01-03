@@ -78,13 +78,22 @@ function listData(data) {
     editButton.setAttribute("id", "editButton")
     editButton.value = data._id
     const todoList = document.getElementById("todo-list") 
+    const saveButton = document.createElement('button');
 
-    function editData() {
-      axios.put("https://api.vschool.io/matthewrobinson/todo/", + data[i]._id)
-          .then(res => listData(res.data))
-          .catch(err => console.log(err))
-    
-    }
+    editButton.addEventListener("click", function() {
+        h2.contentEditable = true
+        priceText.contentEditable = true
+        h4.contentEditable = true
+        saveButton.hidden = false
+        editButton.hidden = true
+        h2.style.backgroundColor = "#07a0f9"
+        priceText.style.backgroundColor = "crimson"
+        h4.style.backgroundColor = "crimson"
+
+
+
+   
+    })
 
       todoList.appendChild(div)
       div.appendChild(checkbox)
@@ -92,9 +101,11 @@ function listData(data) {
       div.appendChild(priceText)
       div.appendChild(h4)
       div.appendChild(img)
-      div.appendChild(editButton)  
+      div.appendChild(editButton)
       div.appendChild(delButton)
-
+      div.appendChild(saveButton)  
+      saveButton.hidden = true
+      
     //   document.getElementById('todo-list').appendChild(checkbox)
     //   document.getElementById('todo-list').appendChild(img)
     //   document.getElementById('todo-list').appendChild(h2)
@@ -103,9 +114,33 @@ function listData(data) {
     //   document.getElementById('todo-list').appendChild(delButton)
     //   document.getElementById('todo-list').appendChild(hr)
       
+ //SAVE BUTTON
  
+ saveButton.textContent = "✍️"
+ saveButton.setAttribute("id", "saveButton")
+ saveButton.value = data._id
+ 
+ saveButton.addEventListener("click", function(){
+  const save = {
+    title: h2.textContent,
+    price: priceText.textContent,
+    description: h4.textContent
+  }
+  h2.contentEditable = false
+  priceText.contentEditable = false
+  h4.textContent = false
+
+  saveButton.hidden = true
+  editButton.hidden = false
+
+  axios.put(`https://api.vschool.io/matthewrobinson/todo/${data[i]._id}`, save)
+  .then(res => location.reload( ))
+  .catch(err => console.log(err))
+ })
   }
 }
+
+
 function clearList() {
   const el = document.getElementById('todo-list')
   while (el.firstChild) {
