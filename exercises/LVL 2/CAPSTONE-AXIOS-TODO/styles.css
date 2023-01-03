@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Maven+Pro:wght@500&display=swap');
+/* font-family: 'Julius Sans One', sans-serif;
+ffont-family: 'Julius Sans One', sans-serif;
+font-family: 'Maven Pro', sans-serif; */
+
+body{
+  background-color: rgb(30, 31, 31);
+  padding: 20px;
+  background-image: url(./images/star-4597005_1280\ \(1\).jpg) ;
+  background-repeat: no-repeat;
+  background-size:  100% 400px;
+
+}
+/* TITLE */
+#title{
+  color: #07a0f9;
+  font-size: 65px;
+  letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  font-family: 'Maven Pro', sans-serif;
+}
+/* TODO FORM START */
+#todoform{
+  display: flex;
+  justify-content: center;
+}
+
+#todoform input{
+  width: 300px;
+  height: 30px;
+  margin: 5px;
+  border: 1.5px solid #07a0f9;
+  border-radius: 10px;
+  background-color: rgba(245, 242, 242, 0.343);
+  color: #fff;
+}
+
+::placeholder{
+  color: #fff;
+  font-size: 15px;
+  padding-left: 5px;
+}
+#todoform button{
+  margin: 5px;
+  border-radius: 10px;
+  background-color: green;
+  cursor: pointer;
+  color: #fff;
+}
+
+#todoform button:hover{
+  background-color: #fff;
+  color: green;
+  font-weight: 600;
+  
+}
+/* START OF TODO LIST STYLING */
+#todo-list {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 68%;
+  color: #fff;
+  font-family: 'Julius Sans One', sans-serif;
+  align-content: flex-start;
+}
+
+
+.todoWrapper{
+  width: 100%;
+  background-color: rgba(47, 45, 45, 0.411);   
+  box-shadow:  1px 2px #07a0f9;
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+  align-items:flex-end;
+  text-align: center;
+  border-radius: 12px 0;
+  padding-bottom: 15px;
+}
+
+img{
+  height: 100px;
+  width: auto;
+  border-radius: 20%;
+}
+
+
+#deleteButton{
+  background-color: rgba(215, 208, 208, 0.07);
+  border: 1.5px solid #07a0f9;
+  box-shadow: .5px 1px #07a0f9;
+  color: white;
+  font-size: 17px;
+  border-radius: 50%;
+  cursor: pointer;  
+}
+
+#deleteButton:hover{
+  background-color: rgb(0, 0, 0);
+  color: crimson;
+}
+#editButton{
+  background-color: rgba(222, 35, 239, 0.701);
+  border: 1.5px solid #07a0f9;
+  box-shadow: .5px 1px #07a0f9;
+  font-size: 17px;
+  border-radius: 50%;
+  cursor: pointer;  
+}
+
+#editButton:hover{
+  background-color: rgb(80, 202, 145);
+}
