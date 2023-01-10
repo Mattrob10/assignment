@@ -1,0 +1,82 @@
+body{
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.App {
+  text-align: center;
+  align-items: center;
+}
+
+/* Start of Nav */
+.nav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0fa7f3;
+  color: #fff;
+
+}
+#navLogo{
+  font-size: 40px;
+  margin-right: 10px;
+  
+}
+.nav h1{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+/* Start of Card */
+.card{
+  width: 80vh;
+  margin-bottom: 40px;
+}
+
+.cards{
+  display: flex;
+  text-align: center;
+  height: auto;
+  border-bottom: solid 1.3px #0fa7f3;
+  background-color: #ffffff11;
+  color: #fff;
+  border-radius: 5px;
+  
+}
+
+.imgUrl{
+  height: 150px;
+  width: 150px;
+  padding: 15px;
+}
+#marker{
+  color:#0fa7f3;
+  font-size: 19px;
+  padding-right: 5px;
+}
+.card-text{
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 22px;
+  padding-top: 45px;
+  font-weight: 500;
+  color: black;
+
+}
+.card:first-child{
+  margin-top: 110px;
+}
+.place, .price, .timeToGo{
+  padding-bottom: 15px;
+}
