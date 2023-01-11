@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Noto+Sans+SC:wght@100;500;700&display=swap');
+
+/* font-family: 'Kalam', cursive;
+font-family: 'Noto Sans SC', sans-serif; */
+*{
+  margin: 0;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Start of Navbar */
+.navbar{
+  background-color: #ff000063;
+  display: flex;
+  justify-content: center;
+  padding-top:  12px;
+  font-size: 35px;
+}
+.navbar h1{
+  font-family: 'Kalam', cursive; 
+}
+.heart{
+  height: 50px;
+  width: auto;
+}
+.main{
+  margin: 20px 20px;
+  flex-wrap: wrap;
+  
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  margin-block: 30px;
+  color: rgba(255, 0, 0, 0.604);
+  font-size: 22px;
+}
+.info h1{
+  font-family: 'Kalam', cursive; 
+}
+
+.card-container{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  border-bottom: 2px solid rgba(220, 20, 60, 0.215);
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+.animal-image{
+  height: 110px;
+  width: 110px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.card-container ul{
+  list-style: none;
+}
+
+.pet-list li{
+  display: flex;
+  width: 100vh;
+}
+
+.animal-wrapper{
+  display: flex;
+  justify-content: column;
+  text-align: center;
+  background-color: rgb(249, 243, 243);
+  border-radius: 10%;
+  margin: 20px 15px;
+  padding: 10px;
+  height: auto;
+  width: 220px;
+  border: 2px solid rgba(255, 0, 0, 0.356);
+  
+}
+
+.animal-name{
+  border-bottom: 4px solid rgba(255, 0, 0, 0.356);
+  margin-bottom: 5px;
+}
+
+
+
