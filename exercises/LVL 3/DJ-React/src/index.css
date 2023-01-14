@@ -1,0 +1,50 @@
+*{
+  box-sizing: border-box;
+}
+
+.squares {
+  padding:100px;
+  border: 1px solid #8d8d8d;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+
+}
+.container {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 30px 180px;
+  
+}
+
+.btn-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: 10px;
+  margin: 3px;
+  background: linear-gradient(217deg, rgba(211, 205, 205, 0.8), rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgba(0, 123, 255, 0.8), rgba(0,255,0,0) 70.71%),
+              linear-gradient(336deg, rgba(255, 0, 191, 0.8), rgba(0,0,255,0) 70.71%);;
+  border: 1px solid black;
+  border-radius: 35px;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+ 
+  color: white;
+}
+
